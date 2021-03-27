@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+<h3 align="center">Atomic Boilerplate</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="#wrench-Configurações">Configurações</a> |
+  <a href="#dart-Testes">Testes</a> |
+  <a href="#gift-Outros">Outros</a>
+</p>
 
-## Available Scripts
+## :wrench: Configurações
+Será necessário possuir o `yarn` instalado, caso não tenha, rode
+```bash
+npm install -g yarn
+```
 
-In the project directory, you can run:
+Para rodar o projeto você deve:
 
-### `yarn start`
+1. Instalar as dependências usando
+```bash
+yarn
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. Rodar o projeto utilizando
+```bash
+yarn start
+```
+> A página estará rodando em [http://localhost:3000](http://localhost:3000).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Qualquer modificação que você fizer no projeto, será alterada em tempo real no navegador com `Live Reload` (alguns arquivos que não são js/ts podem ter problemas com o Live Reload, então você deverá encerrar o processo do node com `CTRL + C` e rodar novamente o `yarn start`).
 
-### `yarn test`
+## :dart: Testes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para esse projeto estamos utilizando o `Cypress` como biblioteca de testes.
 
-### `yarn build`
+1. Para abrir o `Cypress`, use
+```bash
+yarn test:open
+```
+2. e para rodar os testes, utilize
+```bash
+yarn test:run
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :gift: Outros
+#### `Storybook`
+Temos uma documentação dos componentes através do Storybook. Para conseguir acessar, é só rodar
+```bash
+yarn storybook
+```
+e para rodar o build dele
+```bash
+yarn build-storybook
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### `Docker`
+Caso esteja utilizando Docker e queira rodar o build do projeto, temos um `Dockerfile` já definido e o `docker-compose` também configurado.\
+Para rodar o projeto com Docker, utilize
+```bash
+docker-compose up -d
+```
+e para reiniciar a imagem utilize
+```bash
+docker-compose down && docker rmi [NOME_DA_IMAGEM] && docker-compose up -d
+```
+> Troque o `[NOME_DA_IMAGEM]` pelo respectivo nome da imagem no Docker.

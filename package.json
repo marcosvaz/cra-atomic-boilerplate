@@ -1,11 +1,11 @@
 {
-  "name": "testando",
+  "name": "arquitetura",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "yarn run cypress open",
+    "test:open": "yarn run cypress open",
     "test:run": "yarn run cypress run",
     "eject": "react-scripts eject",
     "generate": "scaffdog generate",

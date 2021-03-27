@@ -1,0 +1,6 @@
+services:
+  front:
+    container_name: 'arquitetura-front'
+    build: ./
+    ports:
+      - "80:5000"
