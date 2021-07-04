@@ -15,7 +15,7 @@ import { Container } from './styles'
 
 export interface I{{ inputs.name | pascal }}Props {}
 
-export const {{ inputs.name | pascal }}: React.FC<I{{ inputs.name | pascal }}Props> = (): JSX.Element => {
+export const {{ inputs.name | pascal }} = ({} : I{{ inputs.name | pascal }}Props) => {
 
   return (
     <Container />

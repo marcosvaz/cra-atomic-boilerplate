@@ -12,9 +12,7 @@ questions:
 ```jsx
 import React from 'react'
 
-export interface I{{ inputs.name | pascal }}Props {}
-
-export const {{ inputs.name | pascal }}: React.FC<I{{ inputs.name | pascal }}Props> = (): JSX.Element => {
+export const {{ inputs.name | pascal }} = () => {
   return (
     <div />
   )
