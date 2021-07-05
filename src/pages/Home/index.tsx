@@ -1,9 +1,10 @@
-import React from 'react'
+import { Button } from '~/components'
 
-export interface IHomeProps {}
-
-export const Home: React.FC<IHomeProps> = (): JSX.Element => {
+export const Home = () => {
   return (
-    <h1>Home</h1>
+    <>
+      <h1>Home</h1>
+      <Button />
+    </>
   )
 }
